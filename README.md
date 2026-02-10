@@ -27,21 +27,20 @@ pip install -r requirements.txt
 
 - **Set Binance Testnet API keys** (USDT-M Futures):
 
-Create a `.env` file in the project root or set environment variables directly:
+  1. Copy the example file:
 
-```bash
-setx BINANCE_API_KEY "your_testnet_api_key"
-setx BINANCE_API_SECRET "your_testnet_api_secret"
-```
+     ```bash
+     cp env.example .env   # on Windows PowerShell: copy env.example .env
+     ```
 
-On non-Windows systems, you would typically use:
+  2. Edit `.env` and fill in your **testnet** API key and secret:
 
-```bash
-export BINANCE_API_KEY="your_testnet_api_key"
-export BINANCE_API_SECRET="your_testnet_api_secret"
-```
+     ```env
+     BINANCE_API_KEY=your_testnet_api_key
+     BINANCE_API_SECRET=your_testnet_api_secret
+     ```
 
-These are read by the app through `src/config.py`.
+  These are read by the app through `src/config.py`. The real `.env` is **git‑ignored** so that secrets are never committed.
 
 ### 2. Project Structure
 
