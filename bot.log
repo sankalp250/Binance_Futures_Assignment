@@ -1,0 +1,217 @@
+2026-02-10 22:06:24 | INFO | src.market_orders | Placing MARKET order: symbol=BTCUSDT side=BUY qty=0.001
+2026-02-10 22:06:24 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1770741384448, 'recvWindow': 5000}
+2026-02-10 22:06:25 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=401 body={'code': -2015, 'msg': 'Invalid API-key, IP, or permissions for action'}
+2026-02-10 22:06:25 | ERROR | __main__ | CLI command failed: Binance API error 401 (code=-2015): Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\Binance\src\cli.py", line 76, in main
+    resp = place_market_order(args.symbol, args.side, args.quantity)
+  File "D:\Binance\src\market_orders.py", line 43, in place_market_order
+    response = client.place_order(
+        symbol=order_input.symbol,
+    ...<2 lines>...
+        quantity=order_input.quantity,
+    )
+  File "D:\Binance\src\binance_client.py", line 114, in place_order
+    return self._post("/fapi/v1/order", params=params, signed=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Binance\src\binance_client.py", line 75, in _post
+    raise BinanceApiError(
+    ...<3 lines>...
+    )
+src.binance_client.BinanceApiError: Binance API error 401 (code=-2015): Invalid API-key, IP, or permissions for action
+2026-02-10 22:09:02 | INFO | src.market_orders | Placing MARKET order: symbol=BTCUSDT side=BUY qty=0.001
+2026-02-10 22:09:02 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1770741542523, 'recvWindow': 5000}
+2026-02-10 22:09:03 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=401 body={'code': -2015, 'msg': 'Invalid API-key, IP, or permissions for action'}
+2026-02-10 22:09:03 | ERROR | __main__ | CLI command failed: Binance API error 401 (code=-2015): Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "D:\Binance\src\cli.py", line 76, in main
+    resp = place_market_order(args.symbol, args.side, args.quantity)
+  File "D:\Binance\src\market_orders.py", line 43, in place_market_order
+    response = client.place_order(
+        symbol=order_input.symbol,
+    ...<2 lines>...
+        quantity=order_input.quantity,
+    )
+  File "D:\Binance\src\binance_client.py", line 114, in place_order
+    return self._post("/fapi/v1/order", params=params, signed=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Binance\src\binance_client.py", line 75, in _post
+    raise BinanceApiError(
+    ...<3 lines>...
+    )
+src.binance_client.BinanceApiError: Binance API error 401 (code=-2015): Invalid API-key, IP, or permissions for action
+2026-02-10 22:10:56 | INFO | src.market_orders | Placing MARKET order: symbol=BTCUSDT side=BUY qty=0.001
+2026-02-10 22:10:56 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1770741656428, 'recvWindow': 5000}
+2026-02-10 22:10:56 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=400 body={'code': -1022, 'msg': 'Signature for this request is not valid.'}
+2026-02-10 22:10:56 | ERROR | __main__ | CLI command failed: Binance API error 400 (code=-1022): Signature for this request is not valid.
+Traceback (most recent call last):
+  File "D:\Binance\src\cli.py", line 76, in main
+    resp = place_market_order(args.symbol, args.side, args.quantity)
+  File "D:\Binance\src\market_orders.py", line 43, in place_market_order
+    response = client.place_order(
+        symbol=order_input.symbol,
+    ...<2 lines>...
+        quantity=order_input.quantity,
+    )
+  File "D:\Binance\src\binance_client.py", line 114, in place_order
+    return self._post("/fapi/v1/order", params=params, signed=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Binance\src\binance_client.py", line 75, in _post
+    raise BinanceApiError(
+    ...<3 lines>...
+    )
+src.binance_client.BinanceApiError: Binance API error 400 (code=-1022): Signature for this request is not valid.
+2026-02-10 22:11:09 | INFO | src.limit_orders | Placing LIMIT order: symbol=BTCUSDT side=SELL qty=0.001 price=75000.0
+2026-02-10 22:11:09 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 75000.0, 'timeInForce': 'GTC', 'timestamp': 1770741669101, 'recvWindow': 5000}
+2026-02-10 22:11:09 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=400 body={'code': -1022, 'msg': 'Signature for this request is not valid.'}
+2026-02-10 22:11:09 | ERROR | __main__ | CLI command failed: Binance API error 400 (code=-1022): Signature for this request is not valid.
+Traceback (most recent call last):
+  File "D:\Binance\src\cli.py", line 80, in main
+    resp = place_limit_order(args.symbol, args.side, args.quantity, args.price)
+  File "D:\Binance\src\limit_orders.py", line 45, in place_limit_order
+    response = client.place_order(
+        symbol=order_input.symbol,
+    ...<4 lines>...
+        time_in_force="GTC",
+    )
+  File "D:\Binance\src\binance_client.py", line 114, in place_order
+    return self._post("/fapi/v1/order", params=params, signed=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Binance\src\binance_client.py", line 75, in _post
+    raise BinanceApiError(
+    ...<3 lines>...
+    )
+src.binance_client.BinanceApiError: Binance API error 400 (code=-1022): Signature for this request is not valid.
+2026-02-10 22:14:35 | INFO | src.market_orders | Placing MARKET order: symbol=BTCUSDT side=BUY qty=0.001
+2026-02-10 22:14:35 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1770741875004, 'recvWindow': 5000}
+2026-02-10 22:14:35 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=400 body={'code': -1022, 'msg': 'Signature for this request is not valid.'}
+2026-02-10 22:14:35 | ERROR | __main__ | CLI command failed: Binance API error 400 (code=-1022): Signature for this request is not valid.
+Traceback (most recent call last):
+  File "D:\Binance\src\cli.py", line 76, in main
+    resp = place_market_order(args.symbol, args.side, args.quantity)
+  File "D:\Binance\src\market_orders.py", line 43, in place_market_order
+    response = client.place_order(
+        symbol=order_input.symbol,
+    ...<2 lines>...
+        quantity=order_input.quantity,
+    )
+  File "D:\Binance\src\binance_client.py", line 114, in place_order
+    return self._post("/fapi/v1/order", params=params, signed=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Binance\src\binance_client.py", line 75, in _post
+    raise BinanceApiError(
+    ...<3 lines>...
+    )
+src.binance_client.BinanceApiError: Binance API error 400 (code=-1022): Signature for this request is not valid.
+2026-02-10 22:15:14 | INFO | src.market_orders | Placing MARKET order: symbol=BTCUSDT side=BUY qty=0.001
+2026-02-10 22:15:14 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1770741914631, 'recvWindow': 5000}
+2026-02-10 22:15:15 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=400 body={'code': -4164, 'msg': "Order's notional must be no smaller than 100 (unless you choose reduce only)."}
+2026-02-10 22:15:15 | ERROR | __main__ | CLI command failed: Binance API error 400 (code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+Traceback (most recent call last):
+  File "D:\Binance\src\cli.py", line 76, in main
+    resp = place_market_order(args.symbol, args.side, args.quantity)
+  File "D:\Binance\src\market_orders.py", line 43, in place_market_order
+    response = client.place_order(
+        symbol=order_input.symbol,
+    ...<2 lines>...
+        quantity=order_input.quantity,
+    )
+  File "D:\Binance\src\binance_client.py", line 122, in place_order
+    return self._post("/fapi/v1/order", params=params, signed=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Binance\src\binance_client.py", line 83, in _post
+    raise BinanceApiError(
+    ...<3 lines>...
+    )
+src.binance_client.BinanceApiError: Binance API error 400 (code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-10 22:16:05 | INFO | src.market_orders | Placing MARKET order: symbol=BTCUSDT side=BUY qty=0.005
+2026-02-10 22:16:05 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1770741965536, 'recvWindow': 5000}
+2026-02-10 22:16:06 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167054696, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'B9Ek1qqT8hOmfP6BF4BPMf', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770741966180}
+2026-02-10 22:16:18 | INFO | src.limit_orders | Placing LIMIT order: symbol=BTCUSDT side=SELL qty=0.005 price=75000.0
+2026-02-10 22:16:18 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.005, 'price': 75000.0, 'timeInForce': 'GTC', 'timestamp': 1770741978477, 'recvWindow': 5000}
+2026-02-10 22:16:19 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167057806, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'DlIal3QoJibrvFHeGNSulI', 'price': '75000.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770741979432}
+2026-02-10 22:19:32 | INFO | src.advanced.stop_limit | Placing STOP_LIMIT order: symbol=BTCUSDT side=SELL qty=0.005 price=76000.0 stop_price=75500.0
+2026-02-10 22:19:32 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP', 'quantity': 0.005, 'price': 76000.0, 'timeInForce': 'GTC', 'stopPrice': 75500.0, 'timestamp': 1770742172253, 'recvWindow': 5000}
+2026-02-10 22:19:32 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=400 body={'code': -2021, 'msg': 'Order would immediately trigger.'}
+2026-02-10 22:19:32 | ERROR | __main__ | CLI command failed: Binance API error 400 (code=-2021): Order would immediately trigger.
+Traceback (most recent call last):
+  File "D:\Binance\src\cli.py", line 84, in main
+    resp = place_stop_limit_order(
+        symbol=args.symbol,
+    ...<3 lines>...
+        stop_price=args.stop_price,
+    )
+  File "D:\Binance\src\advanced\stop_limit.py", line 57, in place_stop_limit_order
+    response = client.place_order(
+        symbol=order_input.symbol,
+    ...<5 lines>...
+        time_in_force="GTC",
+    )
+  File "D:\Binance\src\binance_client.py", line 122, in place_order
+    return self._post("/fapi/v1/order", params=params, signed=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Binance\src\binance_client.py", line 83, in _post
+    raise BinanceApiError(
+    ...<3 lines>...
+    )
+src.binance_client.BinanceApiError: Binance API error 400 (code=-2021): Order would immediately trigger.
+2026-02-10 22:19:51 | INFO | src.advanced.twap | Starting TWAP: symbol=BTCUSDT side=BUY total_qty=0.01 slices=3 interval=0s (per_order_qty=0.0033333333333333335)
+2026-02-10 22:19:51 | INFO | src.advanced.twap | TWAP slice 1/3: placing MARKET order qty=0.0033333333333333335
+2026-02-10 22:19:51 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.0033333333333333335, 'timestamp': 1770742191304, 'recvWindow': 5000}
+2026-02-10 22:19:51 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=400 body={'code': -1111, 'msg': 'Precision is over the maximum defined for this asset.'}
+2026-02-10 22:19:51 | ERROR | __main__ | CLI command failed: Binance API error 400 (code=-1111): Precision is over the maximum defined for this asset.
+Traceback (most recent call last):
+  File "D:\Binance\src\cli.py", line 94, in main
+    responses = run_twap_strategy(
+        symbol=args.symbol,
+    ...<3 lines>...
+        interval_seconds=args.interval,
+    )
+  File "D:\Binance\src\advanced\twap.py", line 65, in run_twap_strategy
+    resp = client.place_order(
+        symbol=symbol,
+    ...<2 lines>...
+        quantity=per_order_qty,
+    )
+  File "D:\Binance\src\binance_client.py", line 122, in place_order
+    return self._post("/fapi/v1/order", params=params, signed=True)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Binance\src\binance_client.py", line 83, in _post
+    raise BinanceApiError(
+    ...<3 lines>...
+    )
+src.binance_client.BinanceApiError: Binance API error 400 (code=-1111): Precision is over the maximum defined for this asset.
+2026-02-10 22:23:17 | INFO | src.advanced.stop_limit | Placing STOP_LIMIT order: symbol=BTCUSDT side=SELL qty=0.005 price=70000.0 stop_price=65000.0
+2026-02-10 22:23:17 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP', 'quantity': 0.005, 'price': 70000.0, 'timeInForce': 'GTC', 'stopPrice': 65000.0, 'timestamp': 1770742397271, 'recvWindow': 5000}
+2026-02-10 22:23:18 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167160667, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'yQodGR3bQ1IIEJhhDWexCS', 'price': '70000.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'STOP', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '65000.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'STOP', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770742398275}
+2026-02-10 22:23:34 | INFO | src.advanced.twap | Starting TWAP: symbol=BTCUSDT side=BUY total_qty=0.015 slices=3 interval=0s (per_order_qty=0.005)
+2026-02-10 22:23:34 | INFO | src.advanced.twap | TWAP slice 1/3: placing MARKET order qty=0.005
+2026-02-10 22:23:34 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1770742414623, 'recvWindow': 5000}
+2026-02-10 22:23:35 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167169464, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '1hxgWsLUhDDUStzAfjiXpH', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770742415296}
+2026-02-10 22:23:35 | INFO | src.advanced.twap | TWAP slice 2/3: placing MARKET order qty=0.005
+2026-02-10 22:23:35 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1770742415215, 'recvWindow': 5000}
+2026-02-10 22:23:35 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167169516, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'z1z7DHhfJEAzHhViiYYKpI', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770742415543}
+2026-02-10 22:23:35 | INFO | src.advanced.twap | TWAP slice 3/3: placing MARKET order qty=0.005
+2026-02-10 22:23:35 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1770742415478, 'recvWindow': 5000}
+2026-02-10 22:23:36 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167169572, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'e2dbxfwhrnq6n8HyzQGs7W', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770742416095}
+2026-02-10 22:23:36 | INFO | src.advanced.twap | Completed TWAP with 3 slices.
+2026-02-10 22:44:28 | INFO | src.market_orders | Placing MARKET order: symbol=BTCUSDT side=BUY qty=0.005
+2026-02-10 22:44:28 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1770743668642, 'recvWindow': 5000}
+2026-02-10 22:44:29 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167477420, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '3Td5KWMw57Xs6bBUNcHgb7', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770743669607}
+2026-02-10 22:44:41 | INFO | src.limit_orders | Placing LIMIT order: symbol=BTCUSDT side=SELL qty=0.005 price=75000.0
+2026-02-10 22:44:41 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.005, 'price': 75000.0, 'timeInForce': 'GTC', 'timestamp': 1770743681625, 'recvWindow': 5000}
+2026-02-10 22:44:42 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167481463, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'itbEulby1xQ3iBkb2POvhM', 'price': '75000.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770743682327}
+2026-02-10 22:44:54 | INFO | src.advanced.stop_limit | Placing STOP_LIMIT order: symbol=BTCUSDT side=SELL qty=0.005 price=70000.0 stop_price=65000.0
+2026-02-10 22:44:54 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP', 'quantity': 0.005, 'price': 70000.0, 'timeInForce': 'GTC', 'stopPrice': 65000.0, 'timestamp': 1770743694838, 'recvWindow': 5000}
+2026-02-10 22:44:55 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167482845, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '856ObdqlzfHyq2HxjnehRk', 'price': '70000.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'STOP', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '65000.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'STOP', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770743695419}
+2026-02-10 22:45:07 | INFO | src.advanced.twap | Starting TWAP: symbol=BTCUSDT side=BUY total_qty=0.015 slices=3 interval=0s (per_order_qty=0.005)
+2026-02-10 22:45:07 | INFO | src.advanced.twap | TWAP slice 1/3: placing MARKET order qty=0.005
+2026-02-10 22:45:07 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1770743707759, 'recvWindow': 5000}
+2026-02-10 22:45:08 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167484890, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '0HvYNnjUrYCBLslta2pMSj', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770743708387}
+2026-02-10 22:45:08 | INFO | src.advanced.twap | TWAP slice 2/3: placing MARKET order qty=0.005
+2026-02-10 22:45:08 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1770743708441, 'recvWindow': 5000}
+2026-02-10 22:45:08 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167484936, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'hYomEE1CIIMYzg4UhBOKFz', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770743708771}
+2026-02-10 22:45:08 | INFO | src.advanced.twap | TWAP slice 3/3: placing MARKET order qty=0.005
+2026-02-10 22:45:08 | INFO | src.binance_client | POST /fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1770743708724, 'recvWindow': 5000}
+2026-02-10 22:45:08 | INFO | src.binance_client | RESPONSE /fapi/v1/order status=200 body={'orderId': 12167485000, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'SSLXD82ybnkkKcrPNgxV60', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.005', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770743709051}
+2026-02-10 22:45:08 | INFO | src.advanced.twap | Completed TWAP with 3 slices.
