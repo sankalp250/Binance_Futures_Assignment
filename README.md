@@ -30,7 +30,7 @@ pip install -r requirements.txt
   1. Copy the example file:
 
      ```bash
-     cp env.example .env   # on Windows PowerShell: copy env.example .env
+     cp .env.example .env   # on Windows PowerShell: copy .env.example .env
      ```
 
   2. Edit `.env` and fill in your **testnet** API key and secret:
